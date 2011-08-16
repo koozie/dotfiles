@@ -88,4 +88,10 @@ set guifont=Lucida_Console:h10:cDEFAULT
 "maximiaze gvim window on startup
 "au GUIEnter * simalt ~x
 
+
+"abbreviations
+:abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
+:ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
+
+
 set secure
