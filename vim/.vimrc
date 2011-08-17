@@ -11,10 +11,6 @@
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
  
-" Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
-"windows version
-"set listchars=tab:»\ ,eol:¬,trail:
 
 
 
@@ -76,17 +72,38 @@ set cursorline
 
 " auto sytax on
 syn on
+
+"turn on auto indent
 set autoindent
 
-"set MAC font
-set guifont=Lucida_Console:h10:cDEFAULT
+
+"url to feature list: http://vimdoc.sourceforge.net/htmldoc/eval.html#feature-list
+if has("gui_running")
+    if has("win32") || has("win64")
+        "windows version
+        set listchars=tab:�\ ,eol:�,trail:�
+        " only for windows platform
+        set guifont=Lucida_Console:h10:cDEFAULT
+
+        "maximiaze gvim window on startup
+        au GUIEnter * simalt ~x
+
+    elseif has("unix") || has("macunix")
+
+        " Use the same symbols as TextMate for tabstops and EOLs
+        set listchars=tab:▸\ ,eol:¬
+        "set MAC font
+        set guifont=Lucida_Console:h10:cDEFAULT
+        
+        "set full screen mode, url: http://amix.dk/blog/post/19403
+        set fuoptions=maxvert,maxhorz
+        au GUIEnter * set fullscreen
+    end
+end
 
 
-" only for windows platform
-"set guifont=Lucida_Console:h10:cDEFAULT
 
-"maximiaze gvim window on startup
-"au GUIEnter * simalt ~x
+
 
 
 "abbreviations
