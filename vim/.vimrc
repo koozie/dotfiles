@@ -1,9 +1,23 @@
+
+
+set nocompatible 		" must be first line
+
+
+" Windows Compatible {
+" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
+" across (heterogeneous) systems easier. 
+if has('win32') || has('win64')
+  set runtimepath=$HOME/dotfiles/vim/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+endif
+" }
+
 " Source the vimrc file after saving it
 "if has("autocmd")
 "  autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
-"let mapleader = ","
-"nmap <leader>v :tabedit $MYVIMRC<CR>
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
 
 
 
