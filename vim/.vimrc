@@ -110,5 +110,15 @@ end
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
 :ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
 
+"required for pathogen
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+
+"require for Align plugin for vim
+set nocp
+filetype plugin on
+
+color wombat        "Set color scheme wombat, located on colors directory
 
 set secure
