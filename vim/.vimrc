@@ -116,7 +116,8 @@ if has("gui_running")
 end
 
 
-
+"set default Netrw view to Tree Listing
+let g:netrw_liststyle= 3
 
 
 
