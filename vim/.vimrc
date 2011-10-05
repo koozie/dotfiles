@@ -90,6 +90,8 @@ syn on
 "turn on auto indent
 set autoindent
 
+"set case insensiive search
+set ignorecase
 
 "url to feature list: http://vimdoc.sourceforge.net/htmldoc/eval.html#feature-list
 if has("gui_running")
