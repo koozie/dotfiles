@@ -43,15 +43,19 @@ nmap <leader>l :set list!<CR>
 " uppercase word in normal mode
 :nnoremap <leader><c-u> gUiw
 
-
+:inoremap jk <esc>
 
 
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
 :ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
 
+:iabbrev ccopy Copyright 2012 Chris Stansbury, all rights reserved.
 
-
+"common typos
+:iab adn and
+:iabbrev waht what
+:iabbrev tehn then
 
 
 
