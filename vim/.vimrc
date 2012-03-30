@@ -45,6 +45,13 @@ nmap <leader>l :set list!<CR>
 
 :inoremap jk <esc>
 
+"surround word with double quotes
+:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+:nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+
+
+
+
 
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
