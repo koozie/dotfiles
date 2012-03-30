@@ -15,19 +15,48 @@ endif
 "if has("autocmd")
 "  autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
+
+
+
+
+
+
+
+
+" Setup Leader Mappings
 let mapleader = ","
-nmap <leader>v :tabedit $MYVIMRC<CR>
+let maplocalleader = "\\"
 
 
-
-
-
+" MAPS Setup 
+" quickly load myvimrc configuation file
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
  
+" mappings: steve losh book
+" move current line down
+:nnoremap <leader>- ddp
+" move current line up
+:nnoremap <leader>_ ddkP
+" uppercase word in normal mode
+:nnoremap <leader><c-u> gUiw
 
 
 
+
+"abbreviations
+:abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
+:ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
+
+
+
+
+
+
+
+" TAB Setup for VIM
 " Set tabstop, softtabstop and shiftwidth to the same value
 command! -nargs=* Stab call Stab()
 function! Stab()
@@ -61,6 +90,13 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
+
+
+
+
+
+
+
 "turn on hidden buffers, allows movement between buffers w/o saving
 set hidden
 
@@ -78,12 +114,6 @@ set cursorline
 " set cursorcolumn
 
 
-"map over Ctrl-V as clipboard paste and Ctrl-C
-"nmap <C-v> "+p
-"nmap <C-c> "+y
-"nmap <C-x> "+d
-
-
 " auto sytax on
 syn on
 
@@ -93,6 +123,12 @@ set autoindent
 "set case insensiive search
 set ignorecase
 
+
+
+"SETUP for OS Specific Options in GUI VIM: 
+"  listchars:  showing non-printables like space, tab, and line ending
+"  fonts
+"  screen size when opening 
 "url to feature list: http://vimdoc.sourceforge.net/htmldoc/eval.html#feature-list
 if has("gui_running")
     if has("win32") || has("win64")
@@ -109,7 +145,8 @@ if has("gui_running")
         " Use the same symbols as TextMate for tabstops and EOLs
         set listchars=tab:▸\ ,eol:¬
         "set MAC font
-        set guifont=Lucida_Console:h10:cDEFAULT
+        "set guifont=Monaco:h12
+        set guifont=Courier\ New:h16
         
         "set full screen mode, url: http://amix.dk/blog/post/19403
         set fuoptions=maxvert,maxhorz
@@ -123,9 +160,6 @@ let g:netrw_liststyle= 3
 
 
 
-"abbreviations
-:abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
-:ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
 
 "required for pathogen
 call pathogen#infect()
@@ -139,3 +173,4 @@ filetype plugin on
 color wombat        "Set color scheme wombat, located on colors directory
 
 set secure
+
