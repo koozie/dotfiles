@@ -49,8 +49,11 @@ nmap <leader>l :set list!<CR>
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
+"Shortcut for Ack: :Ack [options] {pattern} [{directory}]
+nnoremap <leader>a :Ack
 
-
+"Wipe trailing white space
+nnoremap <leader>W :%s/\s\+$//<cr>
 
 
 "abbreviations
