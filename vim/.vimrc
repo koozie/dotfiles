@@ -55,6 +55,8 @@ nnoremap <leader>a :Ack
 "Wipe trailing white space
 nnoremap <leader>W :%s/\s\+$//<cr>
 
+"Set Current Working Directory
+:nnoremap <leader>sd :cd %:p:h<cr>
 
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
