@@ -111,7 +111,8 @@ set shiftwidth=4
 
 
 
-
+"None of these should be word dividers
+set isk+=_,$,@,%,#,-
 
 "turn on hidden buffers, allows movement between buffers w/o saving
 set hidden
