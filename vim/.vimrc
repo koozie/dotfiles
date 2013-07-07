@@ -62,7 +62,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
 :ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
 
-:iabbrev ccopy Copyright 2012 Chris Stansbury, all rights reserved.
+:iabbrev ccopy Copyright 2013 Chris Stansbury, all rights reserved.
 
 "common typos
 :iab adn and
