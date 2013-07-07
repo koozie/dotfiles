@@ -27,6 +27,11 @@ endif
 let mapleader = ","
 let maplocalleader = "\\"
 
+" UnWrap an EDI file
+:nnoremap <leader>euw :%s/\~/\~\r/g<CR>gg
+" ReWrap an EDI file
+:nnoremap <leader>erw :%s/\n//g<CR>gg
+
 
 " MAPS Setup 
 " quickly load myvimrc configuation file
