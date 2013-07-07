@@ -33,6 +33,9 @@ let maplocalleader = "\\"
 :nnoremap <leader>erw :%s/\n//g<CR>gg
 
 
+" Bid - Proposal Reply Structure
+:nnoremap <leader>bid oYour potential client's problem statement (1-2 sentences)<CR><CR>Your solution summary (no more than a couple paragraphs)<CR><CR>Deliverables and Timeframes (if applicable)<CR><CR>Your solution cost<CR><CR>
+
 " MAPS Setup 
 " quickly load myvimrc configuation file
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
