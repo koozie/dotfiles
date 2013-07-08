@@ -34,7 +34,7 @@ let maplocalleader = "\\"
 
 
 " Bid - Proposal Reply Structure
-:nnoremap <leader>bid oYour potential client's problem statement (1-2 sentences)<CR><CR>Your solution summary (no more than a couple paragraphs)<CR><CR>Deliverables and Timeframes (if applicable)<CR><CR>Your solution cost<CR><CR>
+:nnoremap <leader>bid oYour potential client's problem statement (1-2 sentences)<CR><CR>Your solution summary (no more than a couple paragraphs)<CR><CR>Deliverables and Timeframes (if applicable)<CR><CR>Your solution cost<CR><CR>Give the client a way of learning more about your operation and contacting you if they want to proceed<CR><CR>
 
 " MAPS Setup 
 " quickly load myvimrc configuation file
