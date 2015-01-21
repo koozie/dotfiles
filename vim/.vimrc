@@ -66,6 +66,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>
 "Set Current Working Directory
 :nnoremap <leader>sd :cd %:p:h<cr>
 
+"Insert Today's date
+:nnoremap <leader>today "=strftime("%d %b %Y (%a)")<CR>P
+
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
 :ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
