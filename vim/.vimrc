@@ -175,8 +175,8 @@ if has("gui_running")
         set guifont=Courier\ New:h16
         
         "set full screen mode, url: http://amix.dk/blog/post/19403
-        set fuoptions=maxvert,maxhorz
-        au GUIEnter * set fullscreen
+        "set fuoptions=maxvert,maxhorz
+        "au GUIEnter * set fullscreen
     end
 end
 
