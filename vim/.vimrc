@@ -68,6 +68,7 @@ nnoremap <leader>W :%s/\s\+$//<cr>
 
 "Insert Today's date
 :nnoremap <leader>today "=strftime("%d %b %Y (%a)")<CR>P
+:inoremap <leader>today <ESC>"=strftime("%d %b %Y (%a)")<CR>Pa
 
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
@@ -184,22 +185,23 @@ if has("gui_running")
 end
 
 
-"set default Netrw view to Tree Listing
+" set default Netrw view to Tree Listing
 let g:netrw_liststyle= 3
 
 
 
 
-"required for pathogen
+" required for pathogen
 call pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"require for Align plugin for vim
+"r equire for Align plugin for vim
 set nocp
 filetype plugin on
 
-color wombat        "Set color scheme wombat, located on colors directory
+" color wombat        "Set color scheme wombat, located on colors directory
+color dracula   "Set color scheme to dracula, located in colors directory
 
 set secure
 
