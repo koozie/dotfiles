@@ -133,10 +133,6 @@ set hidden
 "turn on line numbers
 set number
 
-" setup a custom status line, from VIM 7.2 book
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-set laststatus=2
-" set laststatus=0 to disable
 
 
 "cursor highlighting
@@ -200,8 +196,15 @@ filetype plugin indent on
 set nocp
 filetype plugin on
 
-" color wombat        "Set color scheme wombat, located on colors directory
+" color wombat        "Set color vcheme wombat, located on colors directory
 color dracula   "Set color scheme to dracula, located in colors directory
 
 set secure
 
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
+" setup a custom status line, from VIM 7.2 book
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+" set laststatus=2
+" set laststatus=0 to disable
