@@ -135,10 +135,6 @@ set hidden
 "turn on line numbers
 set number
 
-" setup a custom status line, from VIM 7.2 book
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
-set laststatus=2
-" set laststatus=0 to disable
 
 
 "cursor highlighting
@@ -187,22 +183,42 @@ if has("gui_running")
 end
 
 
-"set default Netrw view to Tree Listing
+" set default Netrw view to Tree Listing
 let g:netrw_liststyle= 3
 
 
 
 
-"required for pathogen
+" required for pathogen
 call pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"require for Align plugin for vim
+"r equire for Align plugin for vim
 set nocp
 filetype plugin on
 
-color wombat        "Set color scheme wombat, located on colors directory
+" color wombat        "Set color vcheme wombat, located on colors directory
+color dracula   "Set color scheme to dracula, located in colors directory
+
+# Pencil, tool for writing prose in Vim
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,md,mkd call pencil#init()
+    autocmd FileType text            call pencil#init()
+augroup END
+
+
+
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+
+" setup a custom status line, from VIM 7.2 book
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]
+" set laststatus=2
+" set laststatus=0 to disable
+
+
+
 
 set secure
-
