@@ -201,7 +201,7 @@ filetype plugin on
 " color wombat        "Set color vcheme wombat, located on colors directory
 color dracula   "Set color scheme to dracula, located in colors directory
 
-# Pencil, tool for writing prose in Vim
+" Pencil, tool for writing prose in Vim
 augroup pencil
     autocmd!
     autocmd FileType markdown,md,mkd call pencil#init()
