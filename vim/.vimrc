@@ -68,10 +68,13 @@ nnoremap <leader>W :%s/\s\+$//<cr>
 
 "Insert Today's date
 :nnoremap <leader>today "=strftime("%d %b %Y (%a)")<CR>P
+:inoremap <leader>today <ESC>"=strftime("%d %b %Y (%a)")<CR>Pa
 
 "abbreviations
 :abbreviate newday ------------------------------------------------------------------------------------------------------<CR>
 :ab meetingnotes --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
+
+:inoremap <leader>mn --------------------<CR>Meeting Notes<CR>--------------------<CR><CR>A:
 
 :iabbrev ccopy Copyright 2013 Chris Stansbury, all rights reserved.
 
